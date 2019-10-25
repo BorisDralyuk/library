@@ -1,0 +1,17 @@
+<div class="books-container container">
+
+  <h5 *ngIf="books.length === 0">Wishlist empty!</h5>
+
+  <div class="card item-card" *ngFor="let book of books; let id=index">
+    <div class="info-book">
+      <img src="{{book.imageLink}}"  class="card-img-top c-img" alt="...">
+      <div class="card-body c-body">
+        <p class="card-text">{{book.title}}</p>
+      </div>
+    </div>
+    <div class="card-footer text-muted ">
+      <a href="#" class="card-link" (click)="removeBook($event, book)">Remove</a>
+    </div>
+  </div>
+
+</div>

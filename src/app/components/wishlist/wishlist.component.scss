@@ -1,0 +1,27 @@
+.books-container{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 40px;
+	width: 940px;
+}
+
+h5{
+	color: chocolate;
+}
+
+.item-card{
+	width: 162px;
+	margin: 5px;
+}
+
+.c-body{
+	width: 160px;
+	height: 160px;
+	overflow: hidden;
+	padding-top: 0.8rem;
+}
+
+.c-img{
+	width: 160px;
+	height: 130px;
+}

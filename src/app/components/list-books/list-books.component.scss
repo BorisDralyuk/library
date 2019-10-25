@@ -1,0 +1,43 @@
+.books-container{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 40px;
+	width: 940px;
+}
+
+.c-body{
+	width: 160px;
+	height: 160px;
+	overflow: hidden;
+	padding-top: 0.8rem;
+}
+
+.c-img{
+	width: 160px;
+	height: 130px;
+}
+
+.nav-container{
+	width: 940px;
+	padding-left: 40px;
+}
+
+.info-book:hover{
+	cursor: pointer;
+}
+
+.card-footer_bg{
+	background-color: #28a745;
+}
+
+.card-footer_txt {
+	color: #fff;
+}
+
+.item-card {
+	width: 162px;
+	margin: 5px;
+}
+.pag{
+	margin: 10px 0 0 5px;
+}

@@ -1,0 +1,33 @@
+<div class="books-container container">
+
+  <div class="card item-card" *ngFor="let book of getBooks()">
+    <div class="info-book" 
+        (click)="detailBook(book)" 
+        data-toggle="modal"  
+        data-target="#exampleModalScrollable"
+    >
+      <img src="{{book.imageLink}}" class="card-img-top c-img" alt="...">
+      <div class="card-body c-body" >
+        <p class="card-text">{{book.title}}</p>
+      </div>
+    </div>
+    <div class="card-footer text-muted " [ngClass]="{'card-footer_bg' : bookSelected(book)}">
+      <a href="#" 
+        class="card-link" 
+        [ngClass]="{'card-footer_txt' : bookSelected(book)}" 
+        (click)="addBook($event, book)">Add to wishlist</a>
+    </div>
+  </div>
+</div>
+<div class="container nav-container">
+<nav *ngIf="books.length > 10" aria-label="Page navigation example" class="pag">
+  <ul class="pagination">
+    <li class="page-item" [ngClass]="{'active' : activePage === 1}"><a class="page-link" (click)="setPage(1)">1</a></li>
+    <li class="page-item" [ngClass]="{'active' : activePage === 2}"><a class="page-link" (click)="setPage(2)">2</a></li>
+  </ul>
+</nav>
+</div>
+
+<app-detail-book [book]="detailB"></app-detail-book>
+
+

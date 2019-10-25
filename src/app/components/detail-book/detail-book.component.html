@@ -1,0 +1,70 @@
+<div class="modal fade bd-example-modal-lg" 
+		id="exampleModalScrollable" 
+		tabindex="-1" 
+		role="dialog"
+		aria-labelledby="exampleModalScrollableTitle" 
+		aria-hidden="true"
+>
+	<div class="modal-dialog modal-dialog-scrollable" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="exampleModalScrollableTitle">Detail of book</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div *ngIf="book" class="modal-body">
+				<div class="book-detail">
+					<div>
+						<img src="{{book.imageLink}}" class="card-img-top book-photo" alt="...">
+					</div>
+					
+					<div>
+						<h5> {{ book.title}}</h5>
+						
+						<div class="item-detail-book">
+							<div class="item-detail-t">
+								<span>authors: </span>
+							</div>
+							<div class="item-detail-n">
+								<span *ngFor="let author of book.authors">{{author}}, </span>
+							</div>
+						</div>
+						
+						<div class="item-detail-book">
+							<div class="item-detail-t">
+								<span>categories: </span>
+							</div>
+							<div class="item-detail-n">
+								<span *ngFor="let category of book.categories">{{category}}, </span>
+							</div>
+						</div>
+						
+						<div class="item-detail-book">
+							<div class="item-detail-t">
+								<span>language: </span>
+							</div>
+							<div class="item-detail-n">
+								<span>{{book.language}} </span>
+							</div>
+						</div>
+						
+						<div class="item-detail-book">
+							<div class="item-detail-t">
+								<span>pages: </span>
+							</div>
+							<div class="item-detail-n">
+								<span>{{book.pageCount}} </span>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+				<p><span class="desc-title">Description of book:</span></p>
+				{{ book.description}}
+			</div>
+
+		</div>
+	</div>
+</div>

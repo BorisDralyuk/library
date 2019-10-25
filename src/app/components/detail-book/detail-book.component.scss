@@ -1,0 +1,35 @@
+.book-photo {
+	float: left;
+	width: 160px;
+	height: 130px;
+	padding: 0 20px 0 0;
+}
+
+.book-detail {
+	display: flex;
+  margin-bottom: 20px;
+}
+
+h5 {
+	color: blue;
+}
+
+.item-detail-book {
+	display: flex;
+	width: 280px;
+}
+.item-detail-t {
+	width: 90px;
+	color: #5c7914;
+	font-weight: bold;
+}
+
+.item-detail-n {
+	width: 190px;
+	font-style: italic;
+}
+
+.desc-title{
+	color: blueviolet;
+	font-weight: bold;
+}
